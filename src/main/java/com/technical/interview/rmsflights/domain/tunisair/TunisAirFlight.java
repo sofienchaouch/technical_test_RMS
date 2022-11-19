@@ -10,6 +10,10 @@ import javax.persistence.*;
 @Table
 @Data
 @AllArgsConstructor
+/**
+ * A class that represents a flight of TunisAir.
+ */
+
 public class TunisAirFlight {
 
     @Id

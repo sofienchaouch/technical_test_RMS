@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * This class is a service class that is used to get the data from the database using the repository
+ * class
+ */
 @Service
 public class NouvelAirService {
 
@@ -19,7 +23,14 @@ public class NouvelAirService {
 
     public List<NouvelAirFlight > getNouvelAirFlights (NouvelAirRequest nouvelAirRequest){
 
-        return NouvelAirRepository.findNouvelAirFlightsByRequest(nouvelAirRequest.getFrom(),nouvelAirRequest.getTo(),nouvelAirRequest.getOutboundDate(),nouvelAirRequest.getInboundDate());
+        List<NouvelAirFlight > res=  NouvelAirRepository.findNouvelAirFlightsByRequest(nouvelAirRequest.getFrom(),nouvelAirRequest.getTo(),nouvelAirRequest.getOutboundDate(),nouvelAirRequest.getInboundDate());
+
+        return  res ;
+    }
+
+    public List<NouvelAirFlight > findAll (){
+
+        return NouvelAirRepository.findAll();
     }
 
 }

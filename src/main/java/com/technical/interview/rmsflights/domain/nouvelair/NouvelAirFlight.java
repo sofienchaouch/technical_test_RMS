@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
+/**
+ * NouvelAirFlight is a class that represents a flight from one airport to another
+ */
 
 @Entity
 @Table
@@ -25,6 +28,9 @@ public class NouvelAirFlight {
     private Long id;
     private String carrier;
     private double basePrice;
+
+    public NouvelAirFlight() {
+    }
 
     public NouvelAirFlight(String carrier, double basePrice, double tax, double discount, String departureAirportName, String arrivalAirportName, String outboundDateTime, String inboundDateTime) {
         this.carrier = carrier;

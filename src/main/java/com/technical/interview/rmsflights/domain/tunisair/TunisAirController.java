@@ -17,6 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "tunisair")
+/**
+ * A controller class for the TunisAir application.
+ */
 public class TunisAirController {
 
     private final TunisAirService tunisAirService;
@@ -30,6 +33,16 @@ public class TunisAirController {
 
     }
 
+/**
+ * I'm trying to map a list of TunisAirResponse to a list of AllResponses
+ * 
+ * @param origin The IATA code of the origin airport.
+ * @param destination The destination IATA code.
+ * @param departureDate 2019-12-12
+ * @param returnDate 2019-12-31
+ * @param passengerCount the number of passengers
+ * @return A list of TunisAirResponse objects.
+ */
     @GetMapping
     @RequestMapping(path = "flights")
     @ResponseBody

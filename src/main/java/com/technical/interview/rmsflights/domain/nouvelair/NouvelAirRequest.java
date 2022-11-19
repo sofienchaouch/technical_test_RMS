@@ -1,5 +1,9 @@
 package com.technical.interview.rmsflights.domain.nouvelair;
 
+/**
+ * NouvelAirRequest is a class that contains the data that will be used to make a request to the
+ * NouvelAir API
+ */
 public class NouvelAirRequest {
 
     private String from;

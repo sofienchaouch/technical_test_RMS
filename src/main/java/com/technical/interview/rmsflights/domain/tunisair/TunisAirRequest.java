@@ -1,5 +1,8 @@
 package com.technical.interview.rmsflights.domain.tunisair;
 
+/**
+ * A class that is used to make a request to the TunisAir API.
+ */
 public class TunisAirRequest {
 
     private String origin;

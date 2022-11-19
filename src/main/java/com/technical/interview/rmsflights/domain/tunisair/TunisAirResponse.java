@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 
+/**
+ * A class that represents the response from the TunisAir API.
+ */
 public class TunisAirResponse {
     @JsonProperty("airline")
     private String airline;

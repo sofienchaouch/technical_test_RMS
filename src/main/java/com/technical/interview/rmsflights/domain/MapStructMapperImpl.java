@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * It's a Spring component that implements the MapStructMapper interface.
+ */
 @Component
 public class MapStructMapperImpl implements MapStructMapper{
     @Override

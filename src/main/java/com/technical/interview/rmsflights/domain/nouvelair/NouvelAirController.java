@@ -14,6 +14,10 @@ import javax.validation.constraints.Pattern;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+/**
+ * This class is a controller class that is responsible for handling the incoming requests and
+ * returning the appropriate response
+ */
 
 @RestController
 @RequestMapping(path = "nouvelair")
@@ -33,7 +37,7 @@ public class NouvelAirController {
     @GetMapping
     @RequestMapping(path = "flights")
     @ResponseBody
-    public ResponseEntity<List<NouvelAirResponse>> getTunisAirFlights (@RequestParam("from") @Pattern(regexp = "^[A-Z]{3}", message = "Invalid IATA code")
+    public ResponseEntity<List<NouvelAirResponse>> getNouvelAirFlights (@RequestParam("from") @Pattern(regexp = "^[A-Z]{3}", message = "Invalid IATA code")
                                                                   String from,
                                                                       @RequestParam("to") @Pattern(regexp = "^[A-Z]{3}", message = "Invalid IATA code")
                                                                   String to,

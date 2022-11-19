@@ -1,16 +1,21 @@
-package com.technical.interview.rmsflights.domain.tunisair;
+package com.technical.interview.rmsflights.domain.config;
 
 import com.technical.interview.rmsflights.domain.nouvelair.NouvelAirFlight;
 import com.technical.interview.rmsflights.domain.nouvelair.NouvelAirRepository;
+import com.technical.interview.rmsflights.domain.tunisair.TunisAirFlight;
+import com.technical.interview.rmsflights.domain.tunisair.TunisAirRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * This class is used to initialize the database with some data
+ */
 
 @Configuration
-public class TunisAirConfig {
+public class FlightsConfig {
 
     @Bean
     CommandLineRunner commandLineRunner(TunisAirRepository tunisAirRepository, NouvelAirRepository nouvelAirRepository){

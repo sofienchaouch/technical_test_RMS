@@ -1,4 +1,8 @@
 package com.technical.interview.rmsflights.domain.rmsflights;
+/**
+ * RmsFlightsRequest is a class that contains the origin, destination, departure date, return date, and
+ * number of passengers for a flight
+ */
 
 public class RmsFlightsRequest {
 
@@ -7,6 +11,17 @@ public class RmsFlightsRequest {
     private String departureDate;
     private String returnDate;
     private int numberOfPassengers;
+
+    public RmsFlightsRequest() {
+    }
+
+    public RmsFlightsRequest(String origin, String destination, String departureDate, String returnDate, int numberOfPassengers) {
+        this.origin = origin;
+        this.destination = destination;
+        this.departureDate = departureDate;
+        this.returnDate = returnDate;
+        this.numberOfPassengers = numberOfPassengers;
+    }
 
     public String getOrigin() {
         return origin;

@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * It's a service class that uses a repository to get data from a database.
+ */
 @Service
 public class TunisAirService {
 

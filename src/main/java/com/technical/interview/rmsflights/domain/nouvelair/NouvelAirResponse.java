@@ -1,5 +1,13 @@
 package com.technical.interview.rmsflights.domain.nouvelair;
 
+
+import lombok.Data;
+import lombok.Getter;
+
+@Data
+/**
+ * A class that is used to store the response from the API.
+ */
 public class NouvelAirResponse {
 
     private String carrier;

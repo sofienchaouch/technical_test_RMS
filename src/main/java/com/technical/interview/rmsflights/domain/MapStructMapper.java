@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+// A mapper that maps the response of the API to the response of the application.
 @Mapper(
         componentModel = "spring"
 )
