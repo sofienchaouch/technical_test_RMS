@@ -8,6 +8,9 @@ public class NouvelAirRequest {
 
     private String from;
     private String to;
+    private String outboundDate;
+    private String inboundDate;
+    private int numberOfAdults;
 
     public NouvelAirRequest(String from, String to, String outboundDate, String inboundDate, int numberOfAdults) {
         this.from = from;
@@ -17,11 +20,8 @@ public class NouvelAirRequest {
         this.numberOfAdults = numberOfAdults;
     }
 
-    private String outboundDate;
-    private String inboundDate;
-    private int numberOfAdults;
-
-
+    public NouvelAirRequest() {
+    }
 
     public String getFrom() {
         return from;
