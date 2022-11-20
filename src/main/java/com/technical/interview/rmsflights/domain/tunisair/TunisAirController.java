@@ -23,13 +23,11 @@ import java.util.List;
 public class TunisAirController {
 
     private final TunisAirService tunisAirService;
-    private MapStructMapper mapstructMapper;
 
 
     @Autowired
-    public TunisAirController(TunisAirService tunisAirService, MapStructMapper mapstructMapper) {
+    public TunisAirController(TunisAirService tunisAirService) {
         this.tunisAirService = tunisAirService;
-        this.mapstructMapper = mapstructMapper;
 
     }
 
@@ -61,7 +59,7 @@ public class TunisAirController {
 
             TunisAirRequest tunisAirRequest = new TunisAirRequest(origin, destination, departureDateformat, returnDateformat,
                     passengerCount);
-            return new ResponseEntity<>(mapstructMapper.tunisAirFlightToAllResponses(tunisAirService.getTunisAirFlights(tunisAirRequest)), HttpStatus.OK);
+            return new ResponseEntity<>(tunisAirService.getTunisAirFlights(tunisAirRequest), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }

@@ -24,13 +24,11 @@ import java.util.List;
 public class NouvelAirController {
 
     private final NouvelAirService nouvelAirService;
-    private MapStructMapper mapstructMapper;
 
 
     @Autowired
-    public NouvelAirController(NouvelAirService nouvelAirService, MapStructMapper mapstructMapper) {
+    public NouvelAirController(NouvelAirService nouvelAirService) {
         this.nouvelAirService = nouvelAirService;
-        this.mapstructMapper = mapstructMapper;
 
     }
 
@@ -51,7 +49,7 @@ public class NouvelAirController {
             String inboundDateFormat = formatter.format(inboundDate);
 
             NouvelAirRequest nouvelAirRequest = new NouvelAirRequest(from,to,outboundDateFortmat,inboundDateFormat,numberOfAdults);
-            return new ResponseEntity<>(mapstructMapper.nouvelAirFlightToAllResponses(nouvelAirService.getNouvelAirFlights(nouvelAirRequest)), HttpStatus.OK);
+            return new ResponseEntity<>(nouvelAirService.getNouvelAirFlights(nouvelAirRequest), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }

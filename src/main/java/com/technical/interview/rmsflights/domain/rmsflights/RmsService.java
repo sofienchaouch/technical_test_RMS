@@ -1,5 +1,6 @@
 package com.technical.interview.rmsflights.domain.rmsflights;
 
+import com.technical.interview.rmsflights.domain.MapStructMapper;
 import com.technical.interview.rmsflights.domain.nouvelair.NouvelAirFlight;
 import com.technical.interview.rmsflights.domain.nouvelair.NouvelAirRepository;
 import com.technical.interview.rmsflights.domain.tunisair.TunisAirFlight;
