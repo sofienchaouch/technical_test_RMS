@@ -2,7 +2,7 @@
 
 Technical Test RMS Java Spring Boot
 
-## Envirement
+## Environment
 
 Java 8
 
@@ -10,7 +10,7 @@ JDK 1.8
 
 ### Docker Compose
 
-Setup the database and Spring boot  application with the docker-compose
+Setup the database and Spring boot application with the docker-compose
 
 ```bash
 
@@ -18,6 +18,8 @@ Setup the database and Spring boot  application with the docker-compose
 docker-compose up -d
 
 ```
+
+Then you can access the app in (http://localhost:8080/)
 
 ## Swagger ui 
 
