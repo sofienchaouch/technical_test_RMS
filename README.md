@@ -58,3 +58,12 @@ mvn clean install
 ```
 
 then run the project with your IDE
+
+## DEMO
+
+![Alt text](1.png?raw=true "Title")
+![Alt text](2.png?raw=true "Title")
+![Alt text](3.png?raw=true "Title")
+![Alt text](4.png?raw=true "Title")
+![Alt text](5.png?raw=true "Title")
+![Alt text](6.png?raw=true "Title")
