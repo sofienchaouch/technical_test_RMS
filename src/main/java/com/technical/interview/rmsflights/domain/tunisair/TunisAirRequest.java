@@ -10,6 +10,10 @@ public class TunisAirRequest {
     private String departureDate;
     private String returnDate;
     private int passengerCount;
+
+    public TunisAirRequest() {
+    }
+
     public TunisAirRequest(String origin, String destination, String departureDate, String returnDate, int passengerCount) {
         this.origin = origin;
         this.destination = destination;

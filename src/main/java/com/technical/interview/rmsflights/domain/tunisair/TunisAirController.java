@@ -31,7 +31,14 @@ public class TunisAirController {
 
     }
 
-/**
+    @GetMapping
+    @RequestMapping(path = "hello")
+    @ResponseBody
+    public String hello() {
+        return "hello";
+    }
+
+    /**
  * I'm trying to map a list of TunisAirResponse to a list of AllResponses
  * 
  * @param origin The IATA code of the origin airport.
@@ -41,6 +48,8 @@ public class TunisAirController {
  * @param passengerCount the number of passengers
  * @return A list of TunisAirResponse objects.
  */
+
+
     @GetMapping
     @RequestMapping(path = "flights")
     @ResponseBody

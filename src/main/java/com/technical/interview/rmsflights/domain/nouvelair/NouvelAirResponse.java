@@ -19,6 +19,21 @@ public class NouvelAirResponse {
     private String outboundDateTime;
     private String inboundDateTime;
 
+    public NouvelAirResponse() {
+    }
+
+    public NouvelAirResponse(String carrier, double basePrice, double tax, double discount, String departureAirportName, String arrivalAirportName, String outboundDateTime, String inboundDateTime) {
+        this.carrier = carrier;
+        this.basePrice = basePrice;
+        this.tax = tax;
+        this.discount = discount;
+        this.departureAirportName = departureAirportName;
+        this.arrivalAirportName = arrivalAirportName;
+        this.outboundDateTime = outboundDateTime;
+        this.inboundDateTime = inboundDateTime;
+    }
+
+
     public String getCarrier() {
         return carrier;
     }

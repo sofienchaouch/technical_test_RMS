@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Entity
 @Table
 @Data
-@AllArgsConstructor
 /**
  * A class that represents a flight of TunisAir.
  */
@@ -32,6 +31,13 @@ public class TunisAirFlight {
     private double price;
     private String cabinclass;
 
+    private String departureAirportCode;
+
+    private String destinationAirportCode;
+
+    private String departureDate;
+    private String arrivalDate;
+
     public TunisAirFlight() {
     }
 
@@ -45,11 +51,14 @@ public class TunisAirFlight {
         this.arrivalDate = arrivalDate;
     }
 
-    private String departureAirportCode;
-
-    private String destinationAirportCode;
-
-    private String departureDate;
-    private String arrivalDate;
-
+    public TunisAirFlight(Long id, String airline, double price, String cabinclass, String departureAirportCode, String destinationAirportCode, String departureDate, String arrivalDate) {
+        this.id = id;
+        this.airline = airline;
+        this.price = price;
+        this.cabinclass = cabinclass;
+        this.departureAirportCode = departureAirportCode;
+        this.destinationAirportCode = destinationAirportCode;
+        this.departureDate = departureDate;
+        this.arrivalDate = arrivalDate;
+    }
 }
