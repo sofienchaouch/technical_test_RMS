@@ -10,7 +10,7 @@ JDK 1.8
 
 ### Docker Compose
 
-Setup the database and Spring boot Application application with the docker-compose
+Setup the database and Spring boot  application with the docker-compose
 
 ```bash
 
