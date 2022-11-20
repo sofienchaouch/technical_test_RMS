@@ -22,10 +22,10 @@ public class FlightsConfig {
         return args -> {
 
             TunisAirFlight firstFlight =
-                    new TunisAirFlight("tunisair",100.21,"E","FRA","TUN",
+                    new TunisAirFlight("tunisair",100.21,"E","TUN","FRA",
                             "2022-07-08T11:44:44.797","2022-07-09T11:44:44.797");
             TunisAirFlight secondFlight =
-                    new TunisAirFlight("tunisair",90.21,"B","FRA","TUN",
+                    new TunisAirFlight("tunisair",90.21,"B","TUN","FRA",
                             "2022-07-08T11:44:44.797","2022-07-09T11:44:44.797");
 
             List<TunisAirFlight> flights =new ArrayList<>();

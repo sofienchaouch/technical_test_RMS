@@ -43,7 +43,7 @@ public class RmsService {
             rmsFlightsResponse.setDepartureDate(tunisAirFlight.getDepartureDate());
             rmsFlightsResponse.setDestinationAirportCode(tunisAirFlight.getDestinationAirportCode());
             rmsFlightsResponse.setDepartureAirportCode(tunisAirFlight.getDepartureAirportCode());
-            rmsFlightsResponse.setFare(tunisAirFlight.getPrice());
+            rmsFlightsResponse.setFare(tunisAirFlight.getPrice()*rmsFlightsRequest.getNumberOfPassengers());
 
             rmsFlightsResponseList.add(rmsFlightsResponse);
 

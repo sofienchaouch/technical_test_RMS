@@ -1,6 +1,7 @@
 package com.technical.interview.rmsflights.domain.nouvelair;
 
 
+import com.technical.interview.rmsflights.domain.tunisair.TunisAirFlight;
 import com.technical.interview.rmsflights.domain.tunisair.TunisAirRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,9 +24,13 @@ public class NouvelAirService {
 
     public List<NouvelAirFlight > getNouvelAirFlights (NouvelAirRequest nouvelAirRequest){
 
-        List<NouvelAirFlight > res=  NouvelAirRepository.findNouvelAirFlightsByRequest(nouvelAirRequest.getFrom(),nouvelAirRequest.getTo(),nouvelAirRequest.getOutboundDate(),nouvelAirRequest.getInboundDate());
+        List<NouvelAirFlight > nouvelAirFlights=  NouvelAirRepository.findNouvelAirFlightsByRequest(nouvelAirRequest.getFrom(),nouvelAirRequest.getTo(),nouvelAirRequest.getOutboundDate(),nouvelAirRequest.getInboundDate());
 
-        return  res ;
+
+        for (NouvelAirFlight nouvelAirFlight: nouvelAirFlights) {
+            nouvelAirFlight.setBasePrice(nouvelAirFlight.getBasePrice()*nouvelAirRequest.getNumberOfAdults());
+        }
+        return  nouvelAirFlights ;
     }
 
     public List<NouvelAirFlight > findAll (){

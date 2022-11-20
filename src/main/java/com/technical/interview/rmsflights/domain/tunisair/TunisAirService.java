@@ -21,8 +21,12 @@ public class TunisAirService {
     }
 
     public List<TunisAirFlight> getTunisAirFlights (TunisAirRequest tunisAirRequest){
+        List<TunisAirFlight> tunisAirFlights =  tunisAirRepository.findTunisAirFlightsByRequest(tunisAirRequest.getOrigin(),tunisAirRequest.getDestination(),tunisAirRequest.getDepartureDate(),tunisAirRequest.getReturnDate());
 
-        return tunisAirRepository.findTunisAirFlightsByRequest(tunisAirRequest.getOrigin(),tunisAirRequest.getDestination(),tunisAirRequest.getDepartureDate(),tunisAirRequest.getReturnDate());
+        for (TunisAirFlight tunisAirFlight: tunisAirFlights) {
+            tunisAirFlight.setPrice(tunisAirFlight.getPrice()*tunisAirRequest.getPassengerCount());
+        }
+        return tunisAirFlights;
     }
 
 }

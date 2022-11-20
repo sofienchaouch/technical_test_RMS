@@ -1,4 +1,9 @@
-FROM adoptopenjdk:11-jre-hotspot
-ARG JAR_FILE=*.jar
-COPY ${JAR_FILE} application.jar
-ENTRYPOINT ["java", "-jar", "application.jar"]
+FROM openjdk:8
+VOLUME /tmp
+COPY target/*.jar technical_test_rms.jar
+
+ADD /src/main/resources/application.properties application.properties
+
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","technical_test_rms.jar"]
+
